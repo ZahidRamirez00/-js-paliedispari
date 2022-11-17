@@ -35,7 +35,8 @@ let test2 = false;
 do{
     sceltaUtente = prompt("Scegli se PARI o DISPARI");
     numeroUtente = prompt("Scegli un numero da 1 a 5");
-    if(sceltaUtente.toUpperCase() == "DISPARI" || sceltaUtente.toUpperCase() == "PARI"){
+    sceltaUtente = sceltaUtente.toUpperCase();
+    if(sceltaUtente == "DISPARI" || sceltaUtente == "PARI"){
         test1 = true;
     }
     if(numeroUtente<=5 && numeroUtente>0){
@@ -45,7 +46,6 @@ do{
 
 console.log(sceltaUtente);
 console.log(numeroUtente);
-console.log("è tutto ok");
 
 if (pariDispari(sceltaUtente,numeroUtente)){
     console.log("-----------Hai vinto!!!!!-----------");
@@ -62,6 +62,7 @@ if (pariDispari(sceltaUtente,numeroUtente)){
 
 function pariDispari(scelta,numero){
     let numeroCasuale = Math.round(Math.random()*4)+1;
+    console.log(numeroCasuale);
     let somma = numero + numeroCasuale;
     let controllo;
     if(somma%2 == 0){
