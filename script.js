@@ -24,7 +24,6 @@ function palindrome(parola) {
     return true;
 }
 
-
 //=================================================================================
 //  Pari e Dispari
 //Faccio un ciclo per controllare se
