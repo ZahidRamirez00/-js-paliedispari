@@ -13,7 +13,7 @@ if(palindrome(parolaInserita)){
 
 //Creo una funzione per capire se la parola inserita è palindroma 
 function palindrome(parola) {
-    let re = /[^A-Za-z0-9]/g;
+    let re = /[^A-Za-z0-9]/;
     parola = parola.toLowerCase().replace(re, '');
     let len = parola.length;
     for (let i = 0; i < len/2; i++) {
